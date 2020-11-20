@@ -49,6 +49,10 @@
                        showInWebsite="0" showInStore="0">
                     <label>Category path seperator</label>
                 </field>
+                <field id="multi_value_seperator" translate="label" type="text" sortOrder="80" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Multiple Value seperator</label>
+                </field>
             </group>
             <group id="database" translate="label" sortOrder="2" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Database settings</label>
