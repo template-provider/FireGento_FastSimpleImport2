@@ -55,7 +55,8 @@ class Storage
         \Magento\Customer\Model\ResourceModel\Customer\CollectionFactory $collectionFactory,
         \Magento\ImportExport\Model\ResourceModel\CollectionByPagesIteratorFactory $colIteratorFactory,
         array $data = []
-    ) {
+    )
+    {
         $this->_categoryCollection = isset(
             $data['customer_collection']
         ) ? $data['customer_collection'] : $collectionFactory->create();

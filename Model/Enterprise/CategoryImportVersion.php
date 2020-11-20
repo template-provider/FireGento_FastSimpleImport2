@@ -1,4 +1,5 @@
 <?php
+
 namespace FireGento\FastSimpleImport\Model\Enterprise;
 
 use Magento\Staging\Model\VersionManager;

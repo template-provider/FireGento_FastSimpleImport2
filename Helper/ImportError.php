@@ -3,7 +3,9 @@
  * Copyright © 2016 FireGento e.V. - All rights reserved.
  * See LICENSE.md bundled with this module for license details.
  */
+
 namespace FireGento\FastSimpleImport\Helper;
+
 use Magento\ImportExport\Model\History as ModelHistory;
 use Magento\ImportExport\Model\Import\Entity\AbstractEntity;
 use Magento\ImportExport\Model\Import\ErrorProcessing\ProcessingErrorAggregatorInterface;
@@ -49,7 +51,8 @@ class ImportError extends \Magento\Framework\App\Helper\AbstractHelper
         \Magento\ImportExport\Model\History $historyModel,
         \Magento\ImportExport\Helper\Report $reportHelper,
         \Magento\Backend\Helper\Data $helper
-    ) {
+    )
+    {
 
         $this->reportProcessor = $reportProcessor;
         $this->historyModel = $historyModel;
@@ -67,7 +70,8 @@ class ImportError extends \Magento\Framework\App\Helper\AbstractHelper
      */
     public function getImportErrorMessages(
         ProcessingErrorAggregatorInterface $errorAggregator
-    ) {
+    )
+    {
         $resultText = '';
         if ($errorAggregator->getErrorsCount()) {
             $message = '';
@@ -86,17 +90,16 @@ class ImportError extends \Magento\Framework\App\Helper\AbstractHelper
                 }
             }
             try {
-                $resultText.=
+                $resultText .=
                     '<strong>' . __('Following Error(s) has been occurred during importing process:') . '</strong><br>'
                     . '<div class="import-error-wrapper">' . __('Only first 100 errors are displayed here. ')
                     . '<a href="'
                     //. $this->createDownloadUrlImportHistoryFile($this->createErrorReport($errorAggregator))
                     . '">' . __('Download full report') . '</a><br>'
-                    . '<div class="import-error-list">' . $message . '</div></div>'
-                ;
+                    . '<div class="import-error-list">' . $message . '</div></div>';
             } catch (\Exception $e) {
                 foreach ($this->getErrorMessages($errorAggregator) as $errorMessage) {
-                    $resultText.= $errorMessage;
+                    $resultText .= $errorMessage;
                 }
             }
         }
@@ -152,12 +155,12 @@ class ImportError extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return $this->getUrl(self::IMPORT_HISTORY_FILE_DOWNLOAD_ROUTE, ['filename' => $fileName]);
     }
-    
+
     /**
      * Generate url by route and parameters
      *
-     * @param   string $route
-     * @param   array $params
+     * @param string $route
+     * @param array $params
      * @return  string
      */
     public function getUrl($route = '', $params = [])

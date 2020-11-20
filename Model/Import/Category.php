@@ -30,6 +30,7 @@ use Magento\CatalogImportExport\Model\Import\UploaderFactory;
 use Magento\Framework\Filesystem;
 use Magento\UrlRewrite\Model\UrlPersistInterface;
 use Magento\Catalog\Api\CategoryRepositoryInterface;
+
 /**
  * Entity Adapter for importing Magento Categories
  */
@@ -784,8 +785,8 @@ class Category extends \Magento\ImportExport\Model\Import\AbstractEntity
 
     /**
      * Reindex all categories
-     * @throws \Exception
      * @return $this
+     * @throws \Exception
      */
     protected function indexDeleteEvents()
     {
@@ -850,8 +851,8 @@ class Category extends \Magento\ImportExport\Model\Import\AbstractEntity
     /**
      * Create Category entity from raw data.
      *
-     * @throws \Exception
      * @return bool Result of operation.
+     * @throws \Exception
      */
     protected function _importData()
     {
@@ -1285,10 +1286,10 @@ class Category extends \Magento\ImportExport\Model\Import\AbstractEntity
     /**
      * Uploading files into the "catalog/category" media folder.
      * Return a new file name if the same file is already exists.
-     * @todo Solve the problem with images that get imported multiple times.
-     *
      * @param string $fileName
      * @return string
+     * @todo Solve the problem with images that get imported multiple times.
+     *
      */
     protected function uploadMediaFiles($fileName)
     {
@@ -1303,8 +1304,8 @@ class Category extends \Magento\ImportExport\Model\Import\AbstractEntity
     /**
      * Returns an object for upload a media files
      *
-     * @throws LocalizedException
      * @return \Magento\CatalogImportExport\Model\Import\Uploader
+     * @throws LocalizedException
      */
     protected function getUploader()
     {

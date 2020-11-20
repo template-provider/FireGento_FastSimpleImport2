@@ -3,6 +3,7 @@
  * Copyright © 2016 FireGento e.V. - All rights reserved.
  * See LICENSE.md bundled with this module for license details.
  */
+
 namespace FireGento\FastSimpleImport\Model;
 
 use Magento\ImportExport\Model\Import;
@@ -70,7 +71,7 @@ class Importer
             'allowed_error_count' => $this->configHelper->getAllowedErrorCount(),
             'import_images_file_dir' => $this->configHelper->getImportFileDir(),
             'category_path_seperator' => $this->configHelper->getCategoryPathSeperator(),
-            '_import_multiple_value_separator' =>  $this->configHelper->getDefaultMultiValueSeparator(),
+            '_import_multiple_value_separator' => $this->configHelper->getDefaultMultiValueSeparator(),
         ];
     }
 

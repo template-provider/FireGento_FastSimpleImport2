@@ -5,6 +5,7 @@
  *  * See LICENSE.md bundled with this module for license details.
  *
  */
+
 namespace FireGento\FastSimpleImport\Model\Adapters;
 
 class NestedArrayAdapter extends ArrayAdapter

@@ -1,4 +1,5 @@
 <?php
+
 namespace FireGento\FastSimpleImport\Model\Enterprise;
 
 use Magento\Framework\ObjectManagerInterface;
@@ -48,8 +49,8 @@ class VersionFeaturesFactory
         $features = $this->getFeatures();
         $feature = $features[$featureName];
 
-        if ( ($this->productMetadata->getEdition() != self::EDITION_B2B && ! version_compare($this->productMetadata->getVersion(), $feature['minVersion'],'>=')) ||
-            ($this->productMetadata->getEdition() == self::EDITION_B2B && ! version_compare($this->productMetadata->getVersion(), $feature['minB2bVersion'], '>='))) {
+        if (($this->productMetadata->getEdition() != self::EDITION_B2B && !version_compare($this->productMetadata->getVersion(), $feature['minVersion'], '>=')) ||
+            ($this->productMetadata->getEdition() == self::EDITION_B2B && !version_compare($this->productMetadata->getVersion(), $feature['minB2bVersion'], '>='))) {
             return null;
         }
         if ($feature['minEdition'] == self::EDITION_ENTERPRISE && $this->productMetadata->getEdition() == self::EDITION_COMMUNITY) {

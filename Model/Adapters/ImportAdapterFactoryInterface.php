@@ -5,7 +5,8 @@
  */
 
 namespace FireGento\FastSimpleImport\Model\Adapters;
-interface ImportAdapterFactoryInterface{
+interface ImportAdapterFactoryInterface
+{
     /**
      * @return \Magento\ImportExport\Model\Import\AbstractSource
      */
