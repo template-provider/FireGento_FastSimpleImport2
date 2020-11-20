@@ -17,6 +17,7 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
     const XML_PATH_ALLOWED_ERROR_COUNT    = 'fastsimpleimport/default/allowed_error_count';
     const XML_PATH_IMPORT_IMAGES_FILE_FIR = 'fastsimpleimport/default/import_images_file_dir';
     const XML_PATH_CATEGORY_PATH_SEPERATOR = 'fastsimpleimport/default/category_path_seperator';
+    const XML_PATH_MULTI_VALUE_SEPERATOR = 'fastsimpleimport/default/multi_value_seperator';
 
     /**
      * @param \Magento\Framework\App\Helper\Context $context
@@ -25,6 +26,10 @@ class Config extends \Magento\Framework\App\Helper\AbstractHelper
         \Magento\Framework\App\Helper\Context $context
     ) {
         parent::__construct($context);
+    }
+
+    public function getDefaultMultiValueSeparator() {
+        return $this->scopeConfig->getValue(self::XML_PATH_MULTI_VALUE_SEPERATOR, ScopeInterface::SCOPE_STORE);
     }
 
     public function getCategoryPathSeperator() {

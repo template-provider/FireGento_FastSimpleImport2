@@ -15,6 +15,7 @@
                 <validation_strategy>validation-stop-on-errors</validation_strategy>
                 <allowed_error_count>10</allowed_error_count>
                 <category_path_seperator>/</category_path_seperator>
+                <_import_multiple_value_separator>;</_import_multiple_value_separator>
             </default>
         </fastsimpleimport>
         <system>
